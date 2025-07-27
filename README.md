@@ -403,10 +403,6 @@ India's urban road networks often collapse under **predictable yet unmanaged tra
 
 ---
 
-Here’s a polished and professional version of your **“Message from the Author”** for the README file:
-
----
-
 ### 👨‍💻 Message from the Author
 
 > I am actively and continuously developing this project. Currently, only the basic backend–frontend communication models have been shared here. However, much more is on the way, including advanced predictive AI models, real-time data integrations, and optimized route intelligence.
@@ -419,3 +415,13 @@ Here’s a polished and professional version of your **“Message from the Autho
 > * Generate intelligent traffic insights to help **governments** improve infrastructure planning and policy decisions.
 >
 > This project is still in its early stages, and I welcome contributions, feedback, or collaboration from developers, data scientists, urban planners, and traffic authorities. Together, we can build a smarter future for our roads.
+
+# Showcase
+
+<img width="2198" height="1017" alt="Screenshot 2025-07-28 014545" src="https://github.com/user-attachments/assets/84fd6c76-0d7d-4846-ad5c-c4a2483b2373" />
+
+
+
+https://github.com/user-attachments/assets/7a17cdb3-b199-4ecc-aba8-2c90be1a181b
+
+
