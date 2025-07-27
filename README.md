@@ -62,41 +62,54 @@ The system predicts congestion before it happens and proactively reroutes traffi
 
 ---
 
-                            +------------------------------+
-                            |         User Device          |
-                            |  (Mobile / Web Interface)    |
-                            +-------------+----------------+
-                                          |
-                                          v
-+-----------------------------+   REST API Calls   +----------------------------+
-|     Frontend Client (SPA)   +------------------->|     FastAPI Backend Layer  |
-| React.js + TailwindCSS      |                    | Handles routing & logic    |
-| State: Context API / Redux  |<-------------------+ Structured JSON Responses  |
-+-----------------------------+                    +-------------+--------------+
-                                                             |
-                                                             v
-                                              +--------------+---------------+
-                                              |     SmartRoute Engine        |
-                                              |  AI/ML Algorithms & Logic    |
-                                              |  - Real-time prediction      |
-                                              |  - Graph optimization        |
-                                              |  - Constraint satisfaction   |
-                                              +--------------+---------------+
-                                                             |
-                                                             v
-                                               +-------------+--------------+
-                                               |      Data Services Layer    |
-                                               |  - Historical traffic DB    |
-                                               |  - Live traffic + events    |
-                                               |  - Weather/Map APIs         |
-                                               +-------------+--------------+
-                                                             |
-                                                             v
-                                               +-------------+--------------+
-                                               |     PostgreSQL / SQLite     |
-                                               | Structured + NoSQL support  |
-                                               | Geo-indexed route data      |
-                                               +-----------------------------+
+                       +-----------------------------+
+                       |        End Users            |
+                       |  (TSRTC Ops, Commuters)     |
+                       +-------------+---------------+
+                                     |
+                         UI: React + Tailwind
+                                     |
+                +--------------------▼----------------------+
+                |           Frontend Layer (React)          |
+                |  - SmartRouteForm (input interface)       |
+                |  - ResultCard, Loader, Error Components   |
+                |  - Uses Axios/Fetch for API Calls         |
+                +--------------------+----------------------+
+                                     |
+                    RESTful API: /api/smart-route (POST)
+                                     |
+                +--------------------▼----------------------+
+                |          Backend Layer (FastAPI)          |
+                |  - Route validation and preprocessing     |
+                |  - Middleware for logging, auth (future)  |
+                |  - Async handling for performance         |
+                +--------------------+----------------------+
+                                     |
+          +--------------------------▼----------------------------+
+          |              SmartRoute Engine (AI Core)              |
+          |  - Pathfinding algorithms (Dijkstra, A*)              |
+          |  - Graph models for road networks                     |
+          |  - Congestion prediction (ML/Rule-based hybrid)       |
+          |  - Temporal logic (time-based pattern learning)       |
+          +--------------------------+----------------------------+
+                                     |
+                    Data Store: PostgreSQL / TimescaleDB
+                                     |
+          +--------------------------▼----------------------------+
+          |     Data Ingestion & Integration Subsystems           |
+          |  - Google Maps API, GHMC Traffic Feed, IMD API        |
+          |  - Weather, event, and real-time traffic data         |
+          |  - CSV/JSON-based batch loaders (ETL pipelines)       |
+          +--------------------------+----------------------------+
+                                     |
+                     Future Module: Kafka / Redis Streams
+                                     |
+          +--------------------------▼----------------------------+
+          |               Real-Time Messaging Layer               |
+          |  - Event bus for vehicle inputs, traffic events       |
+          |  - Live update to dashboard and APIs                  |
+          +-------------------------------------------------------+
+
 
 Deployment:
 - Nginx Reverse Proxy (Production)
