@@ -228,17 +228,6 @@ We planning to use the following features:
 
 ---
 
-## 📈 Future Plans
-
-* ✅ Full historical traffic model integration
-* ✅ GPS/vehicle telematics plug-in
-* ⏳ Road width + camera feed processing
-* ⏳ Auto-adaptive ML model (federated learning)
-* ⏳ Emergency vehicle override with audio signals
-* ⏳ Integration with TSRTC or government transport databases
-
----
-
 ## 🧾 `SmartRouteForm.jsx` Component Overview
 
 This is the **frontend UI form** where users submit route details like source, destination, time, and user type (student, office-goer, etc). The form sends a POST request to the FastAPI backend.
@@ -380,6 +369,17 @@ Real-time Data     Historical Traffic DB    Road Width + Time Rules
 
 ---
 
+## 📈 Future Plans
+
+* ✅ Full historical traffic model integration
+* ✅ GPS/vehicle telematics plug-in
+* ⏳ Road width + camera feed processing
+* ⏳ Auto-adaptive ML model (federated learning)
+* ⏳ Emergency vehicle override with audio signals
+* ⏳ Integration with TSRTC or government transport databases
+
+---
+
 ## 🙌 Contribution
 
 We’re actively building! Contributions are welcome:
@@ -401,3 +401,21 @@ India's urban road networks often collapse under **predictable yet unmanaged tra
 * Adapt like a traffic officer
 * React faster than humans can
 
+---
+
+Here’s a polished and professional version of your **“Message from the Author”** for the README file:
+
+---
+
+### 👨‍💻 Message from the Author
+
+> I am actively and continuously developing this project. Currently, only the basic backend–frontend communication models have been shared here. However, much more is on the way, including advanced predictive AI models, real-time data integrations, and optimized route intelligence.
+>
+> This system is designed with countries like **India** in mind, where traffic congestion and urban mobility challenges are critical issues. While my initial focus is on **Hyderabad**, the broader vision of this project is to serve as a scalable AI-powered traffic management tool that can:
+>
+> * Help **public commuters** with real-time smart route suggestions.
+> * Assist **e-commerce and food delivery apps** to optimize delivery routes.
+> * Support **public transportation systems** in dynamic scheduling and routing.
+> * Generate intelligent traffic insights to help **governments** improve infrastructure planning and policy decisions.
+>
+> This project is still in its early stages, and I welcome contributions, feedback, or collaboration from developers, data scientists, urban planners, and traffic authorities. Together, we can build a smarter future for our roads.
