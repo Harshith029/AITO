@@ -134,11 +134,6 @@ The system predicts congestion before it happens and proactively reroutes traffi
 
 ---
 
-Monitoring & Observability:
-- Prometheus (planned), Sentry (errors), Grafana (dashboards)
-
----
-
 ## 🛠️ Tech Stack (Expanded & Layered)
 
 | Layer            | Technology                           | Purpose / Notes                                                      |
