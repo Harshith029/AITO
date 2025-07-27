@@ -64,6 +64,29 @@ The system predicts congestion before it happens and proactively reroutes traffi
 
 ---
 
+## 🧠 Key Features
+
+* 🔁 **Smart Route Prediction** — AI-based selection of optimal route based on vehicle size, road width, weather, traffic density, and more.
+* 🌧️ **Environment-aware Decisioning** — Rain, cloud cover, and time-of-day influence path selection.
+* 🏫 **School & Emergency Zones** — Adjust timings and restrictions dynamically.
+* 🗺️ **Multi-path Routing** — Suggests alternate routes, even through sub-streets or feeder roads.
+* 🛑 **Incident Logging & Rerouting** — Handles accidents, blockages, or emergency needs.
+* 📊 **Traffic Pattern Analysis** — Backend ML models continuously learn from historical & real-time data.
+* 🔄 **FastAPI REST Interface** — Robust API for integration with apps, buses, or city infrastructure.
+
+---
+
+## 🧩 Use Cases
+
+* **Public Bus Routing** on constrained city roads (fixed bus stops).
+* **Emergency Vehicle Clearance** via shortest safe dynamic paths.
+* **School Time Restrictions** applied automatically in AI engine.
+* **Congestion Dissolution**: AI splits vehicles into parallel paths to de-clog a hotspot.
+* **Weather-aware Routing**: Suggests paths that drain well during rain.
+* **Micro-route Management**: Suggests alternate street-level paths based on road width and vehicle size.
+
+---
+
 ## 🏗️ System Architecture
 
                        +-----------------------------+
@@ -187,36 +210,6 @@ We planning to use the following features:
 
 ---
 
-## 🚀 Project Goal
-
-> **To revolutionize urban mobility** by reducing traffic congestion, optimizing public and private transport routes, and enabling cities to **react before traffic happens**—not after.
-
-
----
-
-## 🧠 Key Features
-
-* 🔁 **Smart Route Prediction** — AI-based selection of optimal route based on vehicle size, road width, weather, traffic density, and more.
-* 🌧️ **Environment-aware Decisioning** — Rain, cloud cover, and time-of-day influence path selection.
-* 🏫 **School & Emergency Zones** — Adjust timings and restrictions dynamically.
-* 🗺️ **Multi-path Routing** — Suggests alternate routes, even through sub-streets or feeder roads.
-* 🛑 **Incident Logging & Rerouting** — Handles accidents, blockages, or emergency needs.
-* 📊 **Traffic Pattern Analysis** — Backend ML models continuously learn from historical & real-time data.
-* 🔄 **FastAPI REST Interface** — Robust API for integration with apps, buses, or city infrastructure.
-
----
-
-## 🧩 Use Cases
-
-* **Public Bus Routing** on constrained city roads (fixed bus stops).
-* **Emergency Vehicle Clearance** via shortest safe dynamic paths.
-* **School Time Restrictions** applied automatically in AI engine.
-* **Congestion Dissolution**: AI splits vehicles into parallel paths to de-clog a hotspot.
-* **Weather-aware Routing**: Suggests paths that drain well during rain.
-* **Micro-route Management**: Suggests alternate street-level paths based on road width and vehicle size.
-
----
-
 ## 🧠 AI Algorithms (Simplified for Phase 1)
 
 * **Weighted Route Scoring** based on inputs:
@@ -314,6 +307,78 @@ This is a placeholder until the real ML + graph search engine is ready.
 
 ---
 
+## 🧠 SmartRoute Engine: Advanced ML + Routing Stack
+
+**Key Capabilities:**
+
+* Graph-based routing with context-aware constraints
+* Personalized recommendations using user type + real-time events
+* Predictive modeling with time-windowed traffic patterns
+
+**Pipeline Overview:**
+
+```
+User Request
+    ↓
+Route Graph Builder → Weight Assigner → Constraint Checker
+    ↓                        ↓                     ↓
+Real-time Data     Historical Traffic DB    Road Width + Time Rules
+    ↓                        ↓                     ↓
+    └─────────→ ML Load Predictor → Final Route Selector
+                                 ↓
+                      Returns top 1–3 optimal routes
+```
+
+### Algorithms Gonna be Used:
+
+* **Dijkstra's Algorithm**: For base shortest-path routing
+* **Constraint BFS**: BFS traversal with custom filters
+* **ML Model** (planned): Regression model to predict traffic load
+* **Heuristic Engine**: Boosts routes that avoid:
+
+  * Narrow roads during peak time
+  * School zones in morning hours
+  * Rain-sensitive roads when weather API = rain
+
+---
+
+## 📡 Data Layer Sources
+
+| Source                   | Type        | Use Case                              |
+| ------------------------ | ----------- | ------------------------------------- |
+| GHMC Traffic API         | Real-time   | Current traffic status by zone        |
+| TSRTC Route Schedule     | Static/Live | Bus timings, stop patterns            |
+| OpenStreetMap            | Static      | Road types, widths, alternate routes  |
+| IMD / Weather APIs       | Real-time   | Rain alerts, heat indexes             |
+| Event Database (planned) | Static      | Detect exam days, match days, etc.    |
+| School Timings DB        | Static      | Reroute logic during school start/end |
+
+---
+
+## 📈 Real-Time Prediction Model (ML Phase)
+
+**Goal:** Predict congestion by time & region before it occurs.
+
+### Model Ideas:
+
+* **Input Features:**
+
+  * Time of day
+  * Day of week
+  * Road width
+  * Historical traffic load
+  * Weather condition
+  * Vehicle class (bike, auto, bus, truck)
+  * Crowd events (if any)
+
+* **ML Models** (To Be Evaluated):
+
+  * Random Forest Regressor
+  * Time Series LSTM for zone prediction
+  * XGBoost with engineered features
+  * Clustering for zone-level behavior patterns
+
+---
 
 ## 🙌 Contribution
 
