@@ -136,12 +136,15 @@ The system predicts congestion before it happens and proactively reroutes traffi
           |  - Event bus for vehicle inputs, traffic events       |
           |  - Live update to dashboard and APIs                  |
           +-------------------------------------------------------+
+                                     | 
+          +--------------------------▼----------------------------+
+          |                 Deployment:                           |
+          |   - Nginx Reverse Proxy (Production)                 |
+          |   - Docker Compose + Gunicorn (API Hosting)            |
+          |   - PM2 / Vite Dev Server (Frontend Dev)              |
+          +-------------------------------------------------------+
 
-
-Deployment:
-- Nginx Reverse Proxy (Production)
-- Docker Compose + Gunicorn (API Hosting)
-- PM2 / Vite Dev Server (Frontend Dev)
+---
 
 Monitoring & Observability:
 - Prometheus (planned), Sentry (errors), Grafana (dashboards)
@@ -377,6 +380,13 @@ Real-time Data     Historical Traffic DB    Road Width + Time Rules
 * ⏳ Auto-adaptive ML model (federated learning)
 * ⏳ Emergency vehicle override with audio signals
 * ⏳ Integration with TSRTC or government transport databases
+* 🔌 Plug into **GHMC / Hyderabad live traffic APIs**
+* ⛅ Real-time weather + event + road closure detection
+* 🚌 Bus-specific routing with stop-by-stop congestion awareness
+* 💡 Smart signage: Recommend real-time digital board routing
+* 📱 Mobile app for user-side route suggestions
+* 🧠 Learn from daily patterns (morning vs evening rush, etc.)
+* 📊 Admin dashboard with full heatmaps + user behavior
 
 ---
 
