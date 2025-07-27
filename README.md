@@ -150,7 +150,10 @@ Monitoring & Observability:
 |                  | Sentry (future)                      | Crash/error monitoring                                               |
 | **Security**     | HTTPS + JWT Auth (planned)           | Token-based authentication and secure comms                          |
 |                  | Rate Limiting / CORS                 | Protection from abuse                                                |
-
+| **Mapping / External APIs** | **Google Maps API**, OpenWeather, GHMC feeds | Used for geolocation, traffic heatmaps, ETA, weather          |
+| **Database**                | PostgreSQL + PostGIS, SQLite (local dev)     | Stores routes, traffic history, road metadata                 |
+| **Cache**                   | Redis                                        | Speeds up frequent queries (e.g. source-destination pairs)    |
+| **Data Pipeline (Future)**  | Apache Kafka, Airflow (optional)             | For ingesting real-time data at scale                         |
 ---
 
 #### Key Highlights:
@@ -162,3 +165,31 @@ Monitoring & Observability:
 * **Database**: TimescaleDB used for time-series storage (traffic flows over time)
 
 ---
+
+
+| **Mapping / External APIs** | **Google Maps API**, OpenWeather, GHMC feeds | Used for geolocation, traffic heatmaps, ETA, weather          |
+| **Database**                | PostgreSQL + PostGIS, SQLite (local dev)     | Stores routes, traffic history, road metadata                 |
+| **Cache**                   | Redis                                        | Speeds up frequent queries (e.g. source-destination pairs)    |
+| **Data Pipeline (Future)**  | Apache Kafka, Airflow (optional)             | For ingesting real-time data at scale                         |
+| **Deployment**              | Docker, GitHub Actions, Nginx                | Containerized deployment, auto builds, TLS-secured prod       |
+| **Monitoring**              | Prometheus, Grafana, Sentry                  | For server metrics, app insights, and error tracking          |
+
+---
+
+## 🗺️ Google Maps API Integration
+
+We planning to use the following features:
+
+### ✅ **Google Maps Platform APIs**
+
+| API                     | Use                              |
+| ----------------------- | -------------------------------- |
+| **Directions API**      | Compute alternate routes         |
+| **Distance Matrix API** | Get traffic-based ETA            |
+| **Maps JavaScript API** | Visual overlays on live map      |
+| **Geocoding API**       | Convert addresses to lat/lng     |
+| **Roads API**           | Snap to road segments            |
+| **Traffic Layer**       | (future) Live congestion visuals |
+
+---
+
