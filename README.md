@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+📌 Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AITO (AI-powered Intelligent Traffic Optimization) is a full-stack, modular traffic control and optimization platform. It dynamically manages vehicle routing in real time using AI/ML and rich public infrastructure data — including weather, school timings, road width, vehicle size, event schedules, Google Maps traffic data, and more — to optimize mobility in cities.
 
-## Available Scripts
+The system predicts congestion before it happens and proactively reroutes traffic. Whether it's public transport (e.g. TSRTC buses) or general road traffic, AITO helps intelligently split traffic using all viable roads based on AI's understanding of the city.
 
-In the project directory, you can run:
+🧠 Core Features
 
-### `npm start`
+✅ AI-powered route decision-making (SmartRoute Engine)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ Predicts congestion and reroutes before it happens
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Considers vehicle size, road width, crowd flow, time, events, weather
 
-### `npm test`
+✅ Real-time and historical data analysis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ React + FastAPI full-stack architecture
 
-### `npm run build`
+✅ Multi-user form interface and smart API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ Smart rerouting within allowed road constraints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Future integration with Google Maps API for real-time traffic overlays
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✅ TSRTC-aware suggestions based on fixed routes
 
-### `npm run eject`
+🌟 Project Goals
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Optimize TSRTC & public transport: Smartly balance passengers using fixed routes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Prevent congestion using predictive modeling and AI routing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Minimize fuel use, delays, and emissions across traffic segments
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Use all valid paths (including service roads or alternate legal routes)
 
-## Learn More
+Personalize suggestions using context-aware AI (user type, time, traffic, etc.)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Build real-time, dynamic, map-enhanced interfaces for all users (public and admin)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
