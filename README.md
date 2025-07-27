@@ -52,18 +52,6 @@ The system predicts congestion before it happens and proactively reroutes traffi
 
 ---
 
-## 📈 Future Vision
-
-* 🔌 Plug into **GHMC / Hyderabad live traffic APIs**
-* ⛅ Real-time weather + event + road closure detection
-* 🚌 Bus-specific routing with stop-by-stop congestion awareness
-* 💡 Smart signage: Recommend real-time digital board routing
-* 📱 Mobile app for user-side route suggestions
-* 🧠 Learn from daily patterns (morning vs evening rush, etc.)
-* 📊 Admin dashboard with full heatmaps + user behavior
-
----
-
 ## 🧠 Key Features
 
 * 🔁 **Smart Route Prediction** — AI-based selection of optimal route based on vehicle size, road width, weather, traffic density, and more.
