@@ -301,7 +301,7 @@ Real-time Data     Historical Traffic DB    Road Width + Time Rules
     ↓                        ↓                     ↓
     └─────────→ ML Load Predictor → Final Route Selector
                                  ↓
-                      Returns top 1–3 optimal routes
+                      Returns top 1–many optimal routes available
 ```
 
 ### Algorithms Gonna be Used:
