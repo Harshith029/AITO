@@ -127,8 +127,8 @@ The system predicts congestion before it happens and proactively reroutes traffi
                                      | 
           +--------------------------▼----------------------------+
           |                 Deployment:                           |
-          |   - Nginx Reverse Proxy (Production)                 |
-          |   - Docker Compose + Gunicorn (API Hosting)            |
+          |   - Nginx Reverse Proxy (Production)                  |
+          |   - Docker Compose + Gunicorn (API Hosting)           |
           |   - PM2 / Vite Dev Server (Frontend Dev)              |
           +-------------------------------------------------------+
 
